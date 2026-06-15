@@ -786,7 +786,7 @@ function weekStart(off){const t=new Date(),d=t.getDay(),w=new Date(t);w.setDate(
 function fd(d){return d.getDate()+'/'+(d.getMonth()+1);}
 function isToday(d){const t=new Date();return d.getDate()===t.getDate()&&d.getMonth()===t.getMonth()&&d.getFullYear()===t.getFullYear();}
 const anchor=new Date();anchor.setDate(anchor.getDate()+((6-anchor.getDay()+7)%7));anchor.setHours(0,0,0,0);
-function regaDays(r){const rl=r.toLowerCase();if(rl.includes('diári')||rl.includes('diaria'))return[0,1,2,3,4,5,6];if(rl.includes('2-3')||rl.includes('2 a 3'))return[1,4,6];if(rl.includes('2x')||rl.includes('2 vez'))return[2,6];if(rl.includes('1-2')||rl.includes('1 a 2'))return[3,6];return[6];}
+function regaDays(r){const rl=r.toLowerCase();if(rl.includes('diári')||rl.includes('diaria'))return[0,1,2,3,4,5,6];if(rl.includes('2-3')||rl.includes('2 a 3'))return[1,4,6];if(rl.includes('2×')||rl.includes('2x')||rl.includes('2 vez'))return[2,6];if(rl.includes('1-2')||rl.includes('1 a 2'))return[3,6];return[6];}
 function adubWeeks(a){const al=a.toLowerCase();if(al.includes('mensalm')||al.includes('todo mês'))return 4;if(al.includes('cada 2')||al.includes('2 mes'))return 8;if(al.includes('cada 3')||al.includes('3 mes'))return 12;return 8;}
 function podaType(p){const pl=p.toLowerCase();if(pl.includes('desnec'))return'none';if(pl.includes('anual'))return'annual';if(pl.includes('regular')||pl.includes('mensal')||pl.includes('pinçar'))return'regular';return'asneeded';}
 const wOff={rega:0,adub:0,poda:0};
